@@ -1,0 +1,217 @@
+
+
+.breadcrumb{
+    .breadcrumb-item{
+        a{
+            color: #1C1C1C;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+                color: #0063F6;
+            }
+        }
+        &.active{
+            color: #6c757dab;            
+        }
+    }
+}
+
+.btn-link {
+    color: #1c1c1c;
+    font-weight: 700;
+    padding: 0;
+    border: none;
+    transition: all 0.4s;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    .icon {
+        display: inline-block;
+        max-width: 40px;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: -4px;
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+}
+
+.section-aboutus {
+    .welcome-video {
+        img {}
+    }
+
+    .welcome-content {
+        padding-left: 50px;
+        .title {
+            color: #0063F6;
+            // font-family: "inter", Arial, sans-serif;
+        }
+
+        .subtitle {
+            color: #1c1c1c;
+            font-size: 38px;
+            font-weight: 400;
+            // font-family: "inter", Arial, sans-serif;
+        }
+
+        .description {
+            color: #1c1c1c;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+    }
+}
+
+.section-courses {
+    .course-box {
+        margin: 0 0 30px 0;
+        & > a{
+            outline: none !important;
+            text-decoration: none;
+        }
+        .course-thumbnail{
+            cursor: pointer;
+            margin: 0 0 10px 0;
+            transition: 0.4s all;
+            border: 1px solid #E8E8E8;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .course-title{
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+                color: #0063F6;
+            }
+        }
+        &:hover {
+            // transform: scale(1.05);
+            .course-title{
+                text-decoration: underline;
+            }
+        }
+
+        &.team-member{
+
+            .designation{
+                font-size: 16px;
+                font-weight: normal;
+                color: #686868;
+                text-decoration: none !important;
+            }
+        }
+    }
+}
+
+
+
+.ratio-1{
+    background-color: #0063F6;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0px 5px;
+    font-size: 80%;
+    margin: 0 4px;
+}
+
+.inner-page {
+    padding: 30px 0;
+    .page-title{
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+    .sub-title{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+  }
+
+.section-gradient {
+    .gradient-box {
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+        background: rgb(0, 108, 187);
+        background: linear-gradient(270deg, rgba(0, 108, 187, 1) 0%, rgba(227, 0, 218, 1) 100%);
+        border-radius: 4px;
+        padding: 25px 15px;
+        text-align: center;
+    }
+}
+
+.section-uploads {
+    .upload-content {
+        margin-top: 10px;
+
+        .title {
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #626262;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+}
+
+.section-discover {
+    .discover-box {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        // .discover-thumbnail {
+        // }
+        .discover-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 25px 25px;
+            z-index: 3;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 100%);
+        }
+
+        .title {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.useful-links {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    h3{
+        font-size: 22px;
+    }
+    > div {
+        display: inline-flex;
+        width: 100%;
+        padding-right: 0px;
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+        > div{
+            width: 100%;
+            .links-wrapper {
+                display: flex;
+                flex-flow: wrap;
+                width: 100%;
+                > div {
+                    display: inline-flex;
+                    max-width: 50%;
+                    flex: 0 0 50%;
+
+                    a{
+                        color: inherit;
+                        text-decoration: underline;
+                        &:hover{
+                            color: #0063F6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

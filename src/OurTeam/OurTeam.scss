@@ -1,0 +1,67 @@
+.instructorPopup {
+    .modal-content {
+        .modal-header {
+            border: none;
+            margin-bottom: -48px;
+            position: relative;
+            z-index: 1;
+
+            .modal-title {}
+
+            .btn-close {
+                border: 2px solid;
+                border-radius: 50%;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+
+        .modal-body {
+            padding: 15px 25px;
+
+            .thumbnail {
+                width: 230px;
+                height: 230px;
+                border-radius: 50%;
+                border: 1px solid #f2f2f2;
+
+                img {
+                    background-color: #D9D9D9;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .name {
+                font-size: 36px;
+                font-weight: 700;
+                margin: 15px 0 5px;
+            }
+
+            .price {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .desc {
+                font-size: 16px;
+                margin-bottom: 0;
+                max-height: 170px;
+                overflow-y: auto;
+            }
+        }
+
+        .modal-footer {
+            padding: 0 15px 25px;
+            border: none;
+            .btn-custom {}
+
+            .btn-primary {
+                background-color: #0063F6;
+                border-color: #0063F6;
+            }
+        }
+    }
+}

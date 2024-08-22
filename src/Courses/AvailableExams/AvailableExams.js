@@ -1,0 +1,95 @@
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import { Link } from "react-router-dom";
+
+import Exam from './Exam/Exam';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+
+import globalVar from '../../globalVar'; 
+
+export class AvailableExams extends Component {
+    // static propTypes = {}
+    constructor() {
+        super();
+        this.state = {
+            examsArray: [],
+            certificationId: window.location.pathname.split("/").pop(),
+            // certificationId: this.props.certificationId,
+            // certificationId: 7,
+        };
+
+        // console.log("api", this.state.examsArray )
+    }
+
+    componentDidMount() {
+        this.loadAvailableExams();
+    }
+
+    loadAvailableExams() {
+        const { page } = this.state;
+        // Fetching data from FaceBook Jest Repo
+        
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ certificationId: 4 })
+        };
+        
+        fetch(globalVar.url + 'available_exam', requestOptions)
+            .then(res => res.json())
+            .then(response => {
+                // const filteredExams = response.data.filter(e => {
+                //     return e.certificationId == this.state.certificationId
+                // });
+                this.setState(
+                    { examsArray: response.data },
+                    () => console.log("Available Exams", this.state.examsArray)
+                );
+            }
+            )
+            .catch(error => console.log(error));
+    }
+
+
+    render() {
+        const { examsArray } = this.state;
+
+        return (
+            <>
+
+                {
+                    examsArray.length > 0 ?
+                        <>
+                            <section className="section section-courses inner-page">
+                                <Container>
+                                    <h2 className="title mb-4">Available exam courses</h2>
+                                    <Row>
+
+                                        {examsArray.map((e, index) => (
+
+                                            <Col sm={6} lg={4} xl={3} key={e.examId}>
+                                                {e && (
+                                                    <Exam
+                                                        key={index}
+                                                        examId={e.examId}
+                                                        certificationId={e.certificationId}
+                                                        exam_Name={e.exam_Name}
+                                                        status={e.status}
+
+                                                    />
+                                                )}
+                                            </Col>
+                                        ))}
+                                    </Row>
+
+                                </Container>
+                            </section>
+                        </>
+                        : ''
+                }
+            </>
+        )
+    }
+}
+
+export default AvailableExams

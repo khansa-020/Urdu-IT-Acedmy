@@ -1,0 +1,39 @@
+.testimonials{
+    .carousel {
+        max-width: 900px;
+        margin: 0 auto;
+        .carousel-item{
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #E8E8E8;
+            border-radius: 5px;
+            h3{
+                font-size: 18px;
+                font-weight: 700;
+                margin-top: 15px;
+                margin-bottom: 0;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .carousel-indicators{
+            display: none;
+        }
+        .carousel-control-prev{
+            left: -30px;
+            width: auto;
+            .carousel-control-prev-icon{
+                background: url('../../public/assets/images/CaretLeft.svg') center  no-repeat;
+            }
+        }
+        .carousel-control-next{
+            right: -30px;
+            width: auto;
+            .carousel-control-next-icon{
+                background: url('../../public/assets/images/CaretRight.svg') no-repeat;
+            }
+
+        }
+    }
+}

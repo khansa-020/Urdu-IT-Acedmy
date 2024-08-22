@@ -1,0 +1,9 @@
+.certificateStatus-tag {
+    border: 1px solid #000;
+    padding: 8px 15px 10px;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px
+}
